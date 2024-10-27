@@ -4,9 +4,9 @@ import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd';
 const NavBar = () => {
   const [menuItems, setMenuItems] = useState([
     { id: '1', name: 'Home', url: '/' },
-    { id: '2', name: 'New Properties', url: '/new-properties' },
-    { id: '3', name: 'About Us', url: '/about' },
-    { id: '4', name: 'Contact Us', url: '/contact' },
+    { id: '2', name: 'Properties', url: '/' },
+    { id: '3', name: 'About', url: '/' },
+    { id: '4', name: 'Contact', url: '/' },
   ]);
 
   const [newItem, setNewItem] = useState({ name: '', url: '' });
@@ -68,7 +68,7 @@ const NavBar = () => {
                         {...provided.dragHandleProps}
                         className="cursor-move"
                       >
-                        <a href={url} className="hover:text-blue-400 block text-sm md:text-base">
+                        <a href={url} className="hover:text-blue-400 block text-sm md:text-base max-sm:text-xs">
                           {name}
                         </a>
                       </li>
@@ -84,7 +84,7 @@ const NavBar = () => {
        
         <button
           onClick={() => setShowModal(true)}
-          className="bg-blue-500 hover:bg-blue-600 text-white py-1 px-3 rounded-lg ml-auto md:ml-0"
+          className="bg-blue-500 hover:bg-blue-600 text-white py-1 px-3 rounded-lg ml-auto md:ml-0 max-sm:text-xs whitespace-nowrap"
         >
           Add +
         </button>

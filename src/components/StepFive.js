@@ -1,4 +1,4 @@
-// StepFive.jsx
+
 import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
@@ -23,16 +23,18 @@ const StepFive = ({ nextStep, prevStep, formData, setFormData }) => {
       downPayment: Yup.number()
         .when('paymentPlan', {
           is: 'Installment',
-          then: Yup.number()
+          then: (schema) => schema
             .required('Down payment is required for installment plans')
-            .min(1, 'Down payment must be positive')
+            .min(1, 'Down payment must be positive'),
+          otherwise: (schema) => schema.notRequired(),
         }),
       monthlyInstallment: Yup.number()
         .when('paymentPlan', {
           is: 'Installment',
-          then: Yup.number()
+          then: (schema) => schema
             .required('Monthly installment is required for installment plans')
-            .min(1, 'Monthly installment must be positive')
+            .min(1, 'Monthly installment must be positive'),
+          otherwise: (schema) => schema.notRequired(),
         })
     }),
     onSubmit: (values) => {
