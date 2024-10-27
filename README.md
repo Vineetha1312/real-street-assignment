@@ -58,5 +58,5 @@ React: For building UI components.
 Tailwind CSS: For styling the components.
 @hello-pangea/dnd: For implementing drag-and-drop functionality.
 JavaScript: For component logic.
-HTML/CSS: For structure and styling.
-===
+
+
