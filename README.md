@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+Introduction
+This project is a multi-step form integrated with a draggable and dynamic navigation bar, both built using React. The form collects detailed customer data across multiple steps, while the draggable navbar allows users to reorder and add menu items dynamically. The project focuses on user experience, responsive design, and form validation.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
 
-## Available Scripts
+Multi-Step Form:
+Navigate between multiple form steps.
+Collect data such as property type, price range, and city.
+Summarize submission data in a modal.
 
-In the project directory, you can run:
+Draggable Navbar:
+Drag and reorder navigation links using @hello-pangea/dnd.
+Add new menu items with form validation for name and URL.
 
-### `npm start`
+Responsive Design:
+Works across different screen sizes using Tailwind CSS.
+Responsive layouts for form and navbar.
+Prerequisites
+Before running the project, ensure you have the following installed:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Usage
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Navbar Usage:
+Drag and reorder items on the navbar.
+Click "Add +" to open a modal for adding new menu items.
+Fill in the name and URL fields and click "Add Menu" to save the item.
 
-### `npm test`
+Multi-Step Form Usage:
+Navigate between steps using the Next and Previous buttons.
+Submit the form on the final step to display a summary modal.
+The form tracks input such as property type, area, budget, and more.
+Components Overview
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+NavBar:
+A draggable and dynamic navbar that allows reordering and adding new menu items using a modal.
 
-### `npm run build`
+MultiStepForm:
+Handles navigation through multiple steps, collects form data, and displays a submission summary modal on completion.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+StepIndicator:
+Displays the current step number and highlights progress through the form.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Form Steps (StepOne, StepTwo, etc.):
+Collect different parts of the form data, such as customer information, property details, and price range.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Customization
+Adding More Form Steps:
+Create new step components under src/components/ and update the renderStep() function in MultiStepForm.js to include them.
 
-### `npm run eject`
+Custom Navbar Styling:
+Modify the styles in App.css or use Tailwind classes to adjust the appearance of the navbar.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Validation Rules:
+Update the validateNewItem() function in NavBar.js to change the rules for adding new menu items.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Technologies Used
+React: For building UI components.
+Tailwind CSS: For styling the components.
+@hello-pangea/dnd: For implementing drag-and-drop functionality.
+JavaScript: For component logic.
+HTML/CSS: For structure and styling.
